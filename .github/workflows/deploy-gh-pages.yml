@@ -1,0 +1,22 @@
+name: deploy-gh-pages
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [src/**]
+jobs:
+  update-deploy-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run:
+          | # setup git, see: https://api.github.com/users/github-actions%5Bbot%5D
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - run: | # copy ./src/ to the deploy branch
+          git fetch origin deploy
+          git worktree add deploy deploy
+          rsync -avP --exclude=.git --delete ./src/ ./deploy/
+          git -C deploy add -A
+          git -C deploy commit --allow-empty -am "ci: deploy-gh-pages"
+          git -C deploy push origin deploy
