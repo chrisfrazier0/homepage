@@ -1,50 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris Frazier | GitHub</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+  <meta name="description" content="Chris Frazier, full stack software engineer from Warrenton, VA">
+  <meta name="author" content="Chris Frazier">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chris Frazier | GitHub</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-    <meta name="description" content="Chris Frazier, full stack software engineer from Warrenton, VA">
-    <meta name="author" content="Chris Frazier">
+  <meta name="og:title" content="Chris Frazier">
+  <meta name="og:description" content="Full stack software engineer from Warrenton, VA">
+  <meta name="og:author" content="Chris Frazier">
+  <meta name="og:url" content="https://frazier.software">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@chrisfrazier0">
 
-    <meta name="og:title" content="Chris Frazier">
-    <meta name="og:description" content="Full stack software engineer from Warrenton, VA">
-    <meta name="og:author" content="Chris Frazier">
-    <meta name="og:url" content="https://frazier.software">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@chrisfrazier0">
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="https://analytics.frazier.software/script.js" data-website-id="5a381cb1-64ee-4377-b6ad-36de3f777962"></script>
+</head>
 
-    <link rel="stylesheet" href="/style.css">
-    <script async src="/script.js"></script>
-    <script defer src="https://analytics.frazier.software/script.js" data-website-id="5a381cb1-64ee-4377-b6ad-36de3f777962"></script>
-  </head>
+<body>
+  <ul class="particles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
 
-  <body>
-    <ul class="particles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <div class="container">
-      <section class="main">
-        <h1>Chris Frazier</h1>
-        <p>Full stack software engineer from <span style="white-space: nowrap;">Warrenton, VA.</span></p>
-        <div class="links">
-          <a href="https://github.com/chrisfrazier0/">GitHub</a>
-          <a href="https://linkedin.com/in/chrisfrazier0/">LinkedIn</a>
-          <a href="javascript:location='mailto:\u0063\u0068\u0072\u0069\u0073\u0040\u0066\u0072\u0061\u007a\u0069\u0065\u0072\u002e\u0073\u006f\u0066\u0074\u0077\u0061\u0072\u0065';void 0">E-mail</a>
-        </div>
-      </section>
-    </div>
-  </body>
+  <div class="container active" id="home">
+    <section class="main">
+      <h1>Chris Frazier</h1>
+      <p>Full stack software engineer from <span style="white-space: nowrap;">Warrenton, VA.</span></p>
+      <div class="links">
+        <a href="https://github.com/chrisfrazier0/">GitHub</a>
+        <a href="https://linkedin.com/in/chrisfrazier0/">LinkedIn</a>
+        <span style="white-space: nowrap;">
+          <a href="#projects" data-nav="projects">Projects</a>
+          <a href="#experiments" data-nav="experiments">Experiments</a>
+        </span>
+      </div>
+    </section>
+  </div>
 
+  <div class="container" id="projects">
+    <section class="page">
+      <h2><a href="#" data-nav="home" class="back-arrow">&larr;</a> Projects</h2>
+      <ul class="item-list">
+        <li>
+          <a href="https://dots.frazier.software">Dots</a>
+          <span class="item-desc">Dotfile management tool. Easily backup, sync, and diff your system customizations. Supports encryption for sensitive data.</span>
+          <span class="badges"><span class="badge">Bash</span></span>
+        </li>
+        <li>
+          <a href="https://wisp.frazier.software">Wisp</a>
+          <span class="item-desc">A dead simple CSS boilerplate. Great for documentation and rapid prototyping.</span>
+          <span class="badges"><span class="badge">CSS</span><span class="badge">Javascript</span></span>
+        </li>
+        <li>
+          <a href="https://local.frz.sh">Local Wildcard</a>
+          <span class="item-desc">Wildcard DNS that points back to your own machine. Aka the DNS lifehack you never knew you needed.</span>
+          <span class="badges"><span class="badge">DNS</span></span>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="container" id="experiments">
+    <section class="page">
+      <h2><a href="#" data-nav="home" class="back-arrow">&larr;</a> Experiments</h2>
+      <ul class="item-list">
+        <li>
+          <a href="https://lab.frazier.software/physics">Physics Engine</a>
+          <span class="item-desc">A small, dependency-free 2D physics engine (AABB + circles) with a lightweight ECS toolkit (EntityManager + Scenes).</span>
+          <span class="badges"><span class="badge">JavaScript</span></span>
+        </li>
+        <li>
+          <a href="https://lab.frazier.software/ai">Machine Learning</a>
+          <span class="item-desc">A from-scratch neural network library — built for learning. A set of ML primitives designed to help understand how modern AI works.</span>
+          <span class="badges"><span class="badge">JavaScript</span></span>
+        </li>
+        <li>
+          <a href="https://lab.frazier.software/MARS.js">MARS.js</a>
+          <span class="item-desc">Unopinionated, fast, bare-bones ICWS'94 implementation. Includes support for the commonly used experimental opcodes SEQ, SNE, and NOP as well as A-field relative addressing modes \*, {, and }. (aka EXT94)</span>
+          <span class="badges"><span class="badge">JavaScript</span></span>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <script async src="/script.js"></script>
+</body>
 </html>
