@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600");
 
 :root {
   --sans-font: "Open Sans", Arial, Helvetica, "Helvetica Neue", sans-serif;
-  --bg: #FEFEFE;
-  --text: #5E5E5E;
+  --bg: #fefefe;
+  --text: #5e5e5e;
   --text-accent: #000;
-  --link: #57A0D9;
+  --link: #57a0d9;
   --particles: rgba(50, 50, 50, 0.11);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #19171A;
-    --text: #DCDCDC;
-    --text-accent: #FEFEFE;
-    --link: #57A0D9;
+    --bg: #19171a;
+    --text: #dcdcdc;
+    --text-accent: #fefefe;
+    --link: #57a0d9;
     --particles: rgba(255, 255, 255, 0.07);
   }
 }
@@ -60,7 +60,7 @@ body {
 }
 
 h1 {
-  font-size: 3.0rem;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 1;
   margin-bottom: 25px;
@@ -71,7 +71,10 @@ p {
   margin-bottom: 17px;
 }
 
-a, a:hover, a:active, a:visited {
+a,
+a:hover,
+a:active,
+a:visited {
   color: var(--link);
   text-decoration: none;
 }
@@ -106,7 +109,6 @@ a, a:hover, a:active, a:visited {
   height: 80px;
   animation-delay: 0s;
 }
-
 
 .particles li:nth-child(2) {
   left: 10%;
@@ -177,24 +179,15 @@ a, a:hover, a:active, a:visited {
 }
 
 @keyframes animate {
-  0%{
+  0% {
     transform: translateY(0) rotate(0deg);
     opacity: 1;
     border-radius: 0;
   }
 
-  100%{
+  100% {
     transform: translateY(-1000px) rotate(720deg);
     opacity: 0;
     border-radius: 50%;
   }
-}
-
-.bmc-btn {
-  scale: 0.65;
-  position: absolute;
-  top: 10px;
-  right: 0;
-  color: #111 !important;
-  z-index: 100;
 }
