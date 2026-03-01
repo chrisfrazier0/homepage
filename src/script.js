@@ -47,4 +47,29 @@
     e.preventDefault();
     navigate(link.getAttribute("data-nav"));
   });
+
+  // theme toggle
+  var root = document.documentElement;
+  var toggle = document.getElementById("theme-toggle");
+  var stored = localStorage.getItem("theme");
+  var prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function isDark() {
+    if (stored) return stored === "dark";
+    return prefersDark.matches;
+  }
+
+  function applyTheme() {
+    var dark = isDark();
+    root.classList.toggle("dark", dark);
+    root.classList.toggle("light", !dark);
+    toggle.textContent = dark ? "○" : "●";
+  }
+  applyTheme();
+
+  toggle.addEventListener("click", function () {
+    stored = isDark() ? "light" : "dark";
+    localStorage.setItem("theme", stored);
+    applyTheme();
+  });
 })();
